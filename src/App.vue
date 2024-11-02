@@ -3,7 +3,8 @@
     <header class="app-header">
       <h1>Chess Website</h1>
     </header>
-    <main>
+    <main class="main-content">
+      <ChessBoard />
       <router-view></router-view>
     </main>
   </div>
@@ -12,6 +13,7 @@
 <script setup>
 import { onMounted } from 'vue'
 import './assets/scss/main.scss'
+import ChessBoard from './components/chess/ChessBoard.vue';
 
 onMounted(() => {
   console.log('App mounted')
