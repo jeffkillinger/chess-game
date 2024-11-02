@@ -1,0 +1,15 @@
+  // _mixins.scss
+  @mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin respond-to($breakpoint) {
+    @if $breakpoint == "tablet" {
+      @media screen and (min-width: 768px) { @content; }
+    }
+    @if $breakpoint == "desktop" {
+      @media screen and (min-width: 1024px) { @content; }
+    }
+  }

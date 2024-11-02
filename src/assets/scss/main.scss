@@ -1,0 +1,21 @@
+  // main.scss
+  @import 'reset';
+  @import 'variables';
+  @import 'mixins';
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: var(--primary-color);
+    line-height: 1.6;
+  }
+  
+  .chess-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    
+    @include respond-to('tablet') {
+      grid-template-columns: var(--board-size) var(--sidebar-width);
+    }
+  }

@@ -10,15 +10,15 @@
 </template>
 
 <script setup>
-// Using Composition API
 import { onMounted } from 'vue'
+import './assets/scss/main.scss'
 
 onMounted(() => {
   console.log('App mounted')
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .app {
   min-height: 100vh;
   display: flex;
@@ -28,12 +28,14 @@ onMounted(() => {
     height: var(--header-height);
     background-color: var(--primary-color);
     color: var(--piece-white);
-    @include flex-center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     h1 {
       font-size: 1.5rem;
       
-      @include respond-to('tablet') {
+      @media screen and (min-width: 768px) {
         font-size: 2rem;
       }
     }
